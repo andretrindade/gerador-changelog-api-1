@@ -9,14 +9,14 @@ services:
       context: ./changelog-api
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"  
-  
+      - "3000:3000"
+
   changelog-ui:
     image: changelog-ui
     build:
       context: ./changelog-ui
       dockerfile: Dockerfile
     ports:
-      - "9000:9000"    
+      - "9000:9000"
     environment:
       - API_URL=http://localhost:3000
